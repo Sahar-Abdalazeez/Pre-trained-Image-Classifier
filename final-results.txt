@@ -1,0 +1,16 @@
+Results Table:
+    
+#Total images : 4
+#Dog Images: 1
+#Not a Dog images: 3 
+________________________________
+CNN model 
+Architecture:    %Not-a-Dog Correct   %Dogs Correct   %Breeds Correct   %Match Labels 
+
+resnet               100%                100%              0%               50%
+
+
+alexnet              100%                100%              0%                50%
+
+
+vgg                  100%                100%              0%                50%
