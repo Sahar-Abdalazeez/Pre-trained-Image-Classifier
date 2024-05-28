@@ -42,9 +42,9 @@ def get_input_args():
     # Create Parse using ArgumentParser
     parse = argparse.ArgumentParser()
     # Create 3 command line arguments as mentioned above using add_argument() from ArguementParser method
-    parse.add_argument('--dir',default='pet_images' )
-    parse.add_argument('--arch',default='vgg')
-    parse.add_argument('--dogfile', default='dognames.txt')
+    parse.add_argument('--dir',default='pet_images',type=str, help='The image directory that you want to use' )
+    parse.add_argument('--arch',default='vgg',choices=['vgg','alexnet','resnet'], type=str, help='The modal that you want to use')
+    parse.add_argument('--dogfile', default='dognames.txt',type=str,help='The file that contains the dogs names')
 
     # Replace None with parser.parse_args() parsed argument collection that 
     # you created with this function 

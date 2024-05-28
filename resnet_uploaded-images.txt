@@ -46,36 +46,30 @@ PetLabelDog: 1  ClassLabelDog: 1
 
                     Dog_02.jpg: 
 Real:                        dog   Classifier:          gibbon, hylobates lar  
-PetLabelDog: 0  ClassLabelDog: 0
+PetLabelDog: 1  ClassLabelDog: 0
 
 # Total Images 4 # Matches: 2 # NOT Matches: 2
 
  ** Statistics from calculates_results_stats() function:
-N Images:  4  N Dog Images:  1  N NotDog Images:  3 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 
  ** Check Statistics - calculated from this function as a check:
-N Images:  4  N Dog Images:  1  N NotDog Images:  3 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
 The Model used is : resnet
 Summary:
  n_images: 4
- n_dogs_img: 1
- n_notdogs_img: 3
- n_match: 2
- n_correct_dogs: 1
- n_correct_notdogs: 3
- n_correct_breed: 0
+ n_dogs_img: 2
+ n_notdogs_img: 2
  pct_match: 50.0
- pct_correct_dogs: 100.0
+ pct_correct_dogs: 50.0
  pct_correct_breed: 0.0
  pct_correct_notdogs: 100.0
 
-incorrectly classified dogs: 
-
 incorrectly classified breeds: 
-image: Dog_02.jpg, label: dog, classified label gibbon, hylobates lar
-1716836849.346713
-1716836852.657897
+pet label: dog, classified label kuvasz
+1716929031.4277802
+1716929034.8695061
 
 ** Total Elapsed Runtime: 0:0:3

@@ -22,7 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images
 from classifier import classifier
-
+import os
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function.
 #       Notice that this function doesn't return anything because the
@@ -32,15 +32,15 @@ from classifier import classifier
 
 
 def classify_images(images_dir, results_dic, model):
-    for file in results_dic:
-        file_path = "{}/{}".format(images_dir, file)
+    for file, value in results_dic.items():
+        file_path = os.path.join(images_dir, file)
         classified_image = classifier(file_path, model).lower().strip()
-        image_label = results_dic[file][0]
+        image_label = value[0]
         match = 0
         if image_label in classified_image:
           match = 1
 
-        results_dic[file].extend([classified_image, match])
+        value.extend([classified_image, match])
 
     """
     Creates classifier labels with classifier function, compares pet labels to 

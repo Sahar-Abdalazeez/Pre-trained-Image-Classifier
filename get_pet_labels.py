@@ -60,6 +60,8 @@ def get_pet_labels(image_dir):
   filenames = listdir(image_dir)
   
   for name in filenames:
+    if name.startswith('.'):
+      continue
     label = formatted_label(name)
     if label not in results_dic:
       results_dic[name] = [label]

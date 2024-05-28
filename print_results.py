@@ -31,16 +31,20 @@ def print_results(results_dic, results_stats_dic, model,
     """ 
     print ("The Model used is : {}".format(model))
     print ("Summary:")
+    stats=['n_images',"n_dogs_img","n_notdogs_img","pct_match","pct_correct_dogs","pct_correct_breed","pct_correct_notdogs"]
     for key,value in results_stats_dic.items():
-        print(" {}: {}".format( key,value))
-    if print_incorrect_dogs:
+            if key in stats:
+                print(" {}: {}".format( key,value))
+
+                
+    if print_incorrect_dogs and (results_stats_dic['n_dogs_img']+results_stats_dic['n_correct_notdogs']!=results_stats_dic['n_images'] ):
             print("\nincorrectly classified dogs: ")    
             for key, value in results_dic.items():
                     if value[3] !=value[4]:
-                            print("image {} classified label :{} ".format(key,value[1]))
-    if print_incorrect_breed:
+                            print("pet label {} classified label :{} ".format(value[0],value[1]))
+    if print_incorrect_breed and (results_stats_dic['n_dogs_img']!=results_stats_dic['n_correct_breed'] ):
              print("\nincorrectly classified breeds: ")    
              for key, value in results_dic.items():
-                    if value[3]==0 and  value[2]==0:
-                            print("image: {}, label: {}, classified label {}".format(key,value[0],value[1]))
+                    if value[3]==1 and value[4]==1 and  value[2]==0:
+                            print("pet label: {}, classified label {}".format(value[0],value[1]))
                 
